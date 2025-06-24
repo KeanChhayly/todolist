@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, Helvetica, sans-serif; /* or a font you prefer */
+  line-height: 1.6; /* improves readability */
+  background-color: #f9f9f9; /* light background */
+  color: #333; /* dark text for readability */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header.js */
+.Header_Container {
+  width: 100%;
+  height: 3rem;
+  padding: 3rem 0rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* End Of Header.js */
+/* AddTask.js */
+.Container_Todo {
+  border: 1px solid black;
+  width: 700px;
+  margin: 0 auto 0 auto;
+}
+
+.Container_Todo form {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Container_Todo form input {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  float: left;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.7);
+}
+
+.Container_Todo form button {
+  padding: 0.7rem 1.8rem;
+  border: none;
+  outline: none;
+  background-color: #f80759;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+/* End of AddTask.js */
+
+/* SHowTask.js */
+.Container_Show {
+  width: 1000px;
+
+  margin: 0 auto 0 auto;
+  margin-top: 2rem;
+}
+
+.button {
+  padding: 0.7rem 1.8rem;
+  border: none;
+  outline: none;
+  background-color: #44fa65;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.flex_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.flex_item > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex_item > div > p.count {
+  margin-top: 8px;
+  margin-left: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.Container_Show ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Container_Show ul li {
+  border-left: 8px solid green;
+  border-radius: 10px;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  color: #000;
+  font-weight: bold;
+
+  height: fit-content;
+  background-color: #fff;
+  box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.7);
 }
+.Container_Show ul li > div {
+  display: flex;
+  gap: 1rem;
+}
+/* End of ShowTask */
